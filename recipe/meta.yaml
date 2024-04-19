@@ -1,5 +1,5 @@
 {% set name = "eza" %}
-{% set version = "0.18.10" %}
+{% set version = "0.18.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/eza-community/eza/archive/v{{ version }}.tar.gz
-  sha256: b0b59a7bdd7536941fac210ca25d30f904657f906aa2c01411fb390d4bdcd139
+  sha256: 92d810c36ac67038e2ed3c421087de8793eb0b9de332c9239096df9d52eb30e3
 
 build:
   number: 0
@@ -15,10 +15,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   commands:
