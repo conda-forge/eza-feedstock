@@ -28,10 +28,9 @@ test:
 about:
   home: https://github.com/eza-community/eza
   summary: A modern, maintained replacement for ls.
-  license: MIT
-  license_family: MIT
+  license: EUPL-1.2
   license_file:
-    - LICENCE
+    - LICENCE.txt
     - THIRDPARTY.yml
 
   description: |
