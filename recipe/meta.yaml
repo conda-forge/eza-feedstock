@@ -1,5 +1,5 @@
 {% set name = "eza" %}
-{% set version = "0.19.4" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/eza-community/eza/archive/v{{ version }}.tar.gz
-  sha256: c0094b3ee230702d4dd983045e38ea2bd96375c16381c0206c88fae82fb551a4
+  sha256: e6c058b13aecbed9f037c0607f0df19bc0a3532fea14dacd0090878ed4bbfadc
 
 build:
   number: 0
@@ -28,10 +28,9 @@ test:
 about:
   home: https://github.com/eza-community/eza
   summary: A modern, maintained replacement for ls.
-  license: MIT
-  license_family: MIT
+  license: EUPL-1.2
   license_file:
-    - LICENCE
+    - LICENSE.txt
     - THIRDPARTY.yml
 
   description: |

@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/eza-feedstock/b
 
 Home: https://github.com/eza-community/eza
 
-Package license: MIT
+Package license: EUPL-1.2
 
 Summary: A modern, maintained replacement for ls.
 
