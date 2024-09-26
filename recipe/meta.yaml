@@ -30,7 +30,7 @@ about:
   summary: A modern, maintained replacement for ls.
   license: EUPL-1.2
   license_file:
-    - LICENCE.txt
+    - LICENSE.txt
     - THIRDPARTY.yml
 
   description: |
