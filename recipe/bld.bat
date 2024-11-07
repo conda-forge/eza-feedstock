@@ -1,17 +1,11 @@
-:: check licenses
-cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+@echo on
 
-:: build
-cargo install --locked  --root "%LIBRARY_PREFIX%" --path . || goto :error
+set CARGO_PROFILE_RELEASE_STRIP=symbols
+set CARGO_PROFILE_RELEASE_LTO=fat
 
-:: strip debug symbols
-:: strip "%LIBRARY_PREFIX%\bin\eza.exe" || goto :error
+cargo install --no-track --locked --root "%PREFIX%" --path . || exit 1
 
-:: remove extra build file
-del /F /Q "%LIBRARY_PREFIX%\.crates.toml"
-
-goto :EOF
-
-:error
-echo Failed with error #%errorlevel%.
-exit 1
+cargo-bundle-licenses ^
+    --format yaml ^
+    --output "%SRC_DIR%\THIRDPARTY.yml" ^
+    || exit 1

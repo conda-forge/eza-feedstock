@@ -1,8 +1,7 @@
-{% set name = "eza" %}
 {% set version = "0.20.7" %}
 
 package:
-  name: {{ name|lower }}
+  name: eza
   version: {{ version }}
 
 source:
@@ -14,12 +13,10 @@ build:
 
 requirements:
   build:
+    - {{ compiler('rust') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - {{ compiler('rust') }}
     - cargo-bundle-licenses
-  host:
-  run:
 
 test:
   commands:
