@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/eza-community/eza/archive/v{{ version }}.tar.gz
   sha256: 981af52e7a0d5ab374ed2a58b0bb9542acc81235ff479bb1f08d61941f65b18b
+  patches:
+    - 0001-Update-libz-sys-to-1.1.20.patch
 
 build:
   number: 0
