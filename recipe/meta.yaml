@@ -1,5 +1,5 @@
 {% set name = "eza" %}
-{% set version = "0.20.5" %}
+{% set version = "0.20.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/eza-community/eza/archive/v{{ version }}.tar.gz
-  sha256: 3455907abddd72ab405613588f82e2b5f6771facf215e5bcd92bca1a82520819
+  sha256: 981af52e7a0d5ab374ed2a58b0bb9542acc81235ff479bb1f08d61941f65b18b
 
 build:
   number: 0
@@ -18,15 +18,14 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
-  host:
-  run:
 
 test:
   commands:
     - eza --help
+    - eza --icons --long --git --header
 
 about:
-  home: https://github.com/eza-community/eza
+  home: https://eza.rocks/
   summary: A modern, maintained replacement for ls.
   license: EUPL-1.2
   license_file:
@@ -45,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - synapticarbors
+    - dbast
