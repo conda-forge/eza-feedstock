@@ -18,7 +18,6 @@ better defaults. It uses colours to distinguish file types
 and metadata. It knows about symlinks, extended attributes, and Git.
 And it’s small, fast, and just one single binary.
 
-
 Current build status
 ====================
 
